@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.switchmarkets.com	TRUE	/	FALSE	1999999999	PHPSESSID	276c881c9d6aba82a82ea6fc7a753441
+.www.switchmarkets.com	TRUE	/	FALSE	1999999999	traffic_source	http%3A%2F%2Fwww.switchmarkets.com%2Fintroducing-broker-program
+.www.switchmarkets.com	TRUE	/	FALSE	1999999999	warm_lead	1
+www.switchmarkets.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+
