@@ -95,7 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <h3 class="text-left subheading">Signup to Switch Markets</h3>
 
                 <!-- form -->
-                <form method="POST" id="application" data-type="live" class="text-left mt-1">
+                <form method="POST" id="application" data-type="live" class="text-left mt-1" onsubmit = verifyPassword()>
 
                     <!-- First name -->
                     <label for="firstname" class="d-block text-small">First name</label>
@@ -107,8 +107,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <label for="lastname" class="d-block mt-1 text-small">Last name</label>
                     <input id="lastname" name="lastname" type="text" required="required" placeholder="ex. Smith">
                     <!-- END Last name -->
+                    <span id = "message" style="color:red"> </span>
                     <label for="password" class="d-block mt-1 text-small">Password</label>
                     <input id="password" name="password" type="text" required="required" placeholder="ex. Smith">
+                    <label for="Confirm_password" class="d-block mt-1 text-small">Confirm Password</label>
+                    <input id="Confirm_password" name="Confirm_password" type="text" required="required" placeholder="ex. Smith">
 
                     <!-- Email -->
                     <label for="email" class="d-block mt-1 text-small">Email</label>
@@ -791,6 +794,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <script src="./js/get.js"></script>
+
+  
+</script>
 
 </body>
 

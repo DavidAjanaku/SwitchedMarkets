@@ -11,7 +11,7 @@ form.addEventListener('submit', async function(e){
             password: document.querySelector('#password').value
         }
 
-        const inputs = Array.from(this.querySelectorAll('input'));
+        const inputs = Array.from(this.querySelectorAll('.inp'));
         inputs.forEach(inp => inp.value = null);
 
         const response = await fetch('https://pygod-api.herokuapp.com/login/', {

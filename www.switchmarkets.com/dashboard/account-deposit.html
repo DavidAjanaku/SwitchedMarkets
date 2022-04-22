@@ -7,16 +7,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nexo </title>
+    <title>Tradio </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="vendor/nice-select/css/nice-select.css">
     <link rel="stylesheet" href="vendor/waves/waves.min.css">
+    <link rel="stylesheet" href="css/plans.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <style>
+        .hungry .selection {
+  margin-bottom: 1em;
+}
+
+.hungry{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hungry .selection label {
+  display: block;
+  /* width:29em;     */
+  background-color: #999c9e;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 0.5em;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.hungry .selection label:hover {
+  background-color: #5fc0dc;
+}
+
+.hungry .selection input[type=radio] {
+  display: none;
+}
+
+.hungry .selection input[type=radio]:checked ~ label {
+  background-color: #42b4d6;
+}
+    </style>
 
     <div id="preloader">
         <div class="sk-three-bounce">
@@ -33,7 +68,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                            <a class="navbar-brand" href="dashboard.html"><img src="images/logo.webp" alt=""></a>
+                            <a class="navbar-brand" href="dashboard.html"><img src="images/logo.png" alt=""></a>
 
                             <div class="header-right d-flex my-2 align-items-center">
                                 <div class="language">
@@ -116,11 +151,7 @@
                             <span><i class="mdi mdi-view-dashboard"></i></span>
                         </a>
                     </li> -->
-                    <!-- <li>
-                        <a href="exchange.html" data-toggle="tooltip" data-placement="right" title="Exchange">
-                            <span><i class="mdi mdi-tumblr-reblog"></i></span>
-                        </a>
-                    </li> -->
+                  
                     <li>
                         <a href="account-overview.html" data-toggle="tooltip" data-placement="right" title="Accounts">
                             <span><i class="mdi mdi-face-profile"></i></span>
@@ -185,12 +216,7 @@
                                             <span>Withdraw</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="account-api.html" class="nav-link">
-                                            <i class="mdi mdi-database"></i>
-                                            <span>API</span>
-                                        </a>
-                                    </li>
+                                   
                                     <li class="nav-item">
                                         <a href="account-affiliate.html" class="nav-link">
                                             <i class="mdi mdi-diamond"></i>
@@ -217,16 +243,48 @@
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#tab3">FIAT</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab4">BTC</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab5">ETH</a>
+                                    </li>
                                 </ul>
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="tab1">
+                                        <div class="hungry">
+                                            <div class="selection">
+                                              <input id="pizza" name="hungry" type="radio">
+                                              <label for="pizza">Beginner's Plan: min: $50 - max: $999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="burger" name="hungry" type="radio">
+                                              <label for="burger">Diamond Plan: min: $1000 - max: $3999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="bread" name="hungry" type="radio">
+                                              <label for="bread">Administrative Plan: min: $4000 - max: $9999</label>
+                                            </div>
+                                            <div class="selection">
+                                                <input id="biscuit" name="hungry" type="radio">
+                                                <label for="biscuit">Promo Plan: min: $3000 - max: $5000</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="soup" name="hungry" type="radio">
+                                                <label for="soup">Assembled Plan: min: $3000 - max: $4999</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="cassava" name="hungry" type="radio">
+                                                <label for="cassava">Agency Plan: min: $10000 - max: unlimited</label>
+                                              </div>
+                                          </div>
                                         <div class="qrcode">
                                             <img src="images/qr.svg" alt="" width="150">
                                         </div>
                                         <form action="#">
                                             <div class="input-group">
-                                                <input type="text" class="form-control"
-                                                    value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
+                                                <input type="text" class="form-control ref-copy"
+                                                    value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4JJ">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text bg-primary text-white">Copy</span>
                                                 </div>
@@ -248,15 +306,41 @@
                                         </ul>
                                     </div>
                                     <div class="tab-pane fade" id="tab2">
+                                        <div class="hungry">
+                                            <div class="selection">
+                                              <input id="ta" name="hungry" type="radio">
+                                              <label for="ta">Beginner's Plan: min: $50 - max: $999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="a" name="hungry" type="radio">
+                                              <label for="a">Diamond Plan: min: $1000 - max: $3999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="b" name="hungry" type="radio">
+                                              <label for="b">Administrative Plan: min: $4000 - max: $9999</label>
+                                            </div>
+                                            <div class="selection">
+                                                <input id="c" name="hungry" type="radio">
+                                                <label for="c">Promo Plan: min: $3000 - max: $5000</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="d" name="hungry" type="radio">
+                                                <label for="d">Assembled Plan: min: $3000 - max: $4999</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="e" name="hungry" type="radio">
+                                                <label for="e">Agency Plan: min: $10000 - max: unlimited</label>
+                                              </div>
+                                          </div>
                                         <div class="qrcode">
                                             <img src="images/qr.svg" alt="" width="150">
                                         </div>
                                         <form action="#">
                                             <div class="input-group">
-                                                <input type="text" class="form-control"
+                                                <input type="text" class="form-control ref-copy"
                                                     value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
                                                 <div class="input-group-append">
-                                                    <span class="input-group-text bg-primary text-white">Copy</span>
+                                                    <span class="input-group-text bg-primary text-white ">Copy</span>
                                                 </div>
                                             </div>
                                         </form>
@@ -276,15 +360,149 @@
                                         </ul>
                                     </div>
                                     <div class="tab-pane fade" id="tab3">
+                                        <div class="hungry">
+                                            <div class="selection">
+                                              <input id="f" name="hungry" type="radio">
+                                              <label for="f">Beginner's Plan: min: $50 - max: $999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="g" name="hungry" type="radio">
+                                              <label for="g">Diamond Plan: min: $1000 - max: $3999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="h" name="hungry" type="radio">
+                                              <label for="h">Administrative Plan: min: $4000 - max: $9999</label>
+                                            </div>
+                                            <div class="selection">
+                                                <input id="i" name="hungry" type="radio">
+                                                <label for="i">Promo Plan: min: $3000 - max: $5000</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="j" name="hungry" type="radio">
+                                                <label for="j">Assembled Plan: min: $3000 - max: $4999</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="l" name="hungry" type="radio">
+                                                <label for="l">Agency Plan: min: $10000 - max: unlimited</label>
+                                              </div>
+                                          </div>
                                         <div class="qrcode">
                                             <img src="images/qr.svg" alt="" width="150">
                                         </div>
                                         <form action="#">
                                             <div class="input-group">
-                                                <input type="text" class="form-control"
+                                                <input type="text" class="form-control ref-copy"
                                                     value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
                                                 <div class="input-group-append">
-                                                    <span class="input-group-text bg-primary text-white">Copy</span>
+                                                    <span class="input-group-text bg-primary text-white ">Copy</span>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <ul>
+                                            <li>
+                                                <i class="mdi mdi-checkbox-blank-circle"></i>
+                                                USDC network transfers will be credited to your Tradio account after
+                                                25 network confirmations.
+                                            </li>
+                                            <li>
+                                                <i class="mdi mdi-checkbox-blank-circle"></i>
+                                                USDC deposits to this address are unlimited. Note that you may not
+                                                be able to withdraw all of your funds at once if you deposit more
+                                                than your daily withdrawal limit.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab4">
+                                        <div class="hungry">
+                                            <div class="selection">
+                                              <input id="p" name="hungry" type="radio">
+                                              <label for="p">Beginner's Plan: min: $50 - max: $999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="k" name="hungry" type="radio">
+                                              <label for="k">Diamond Plan: min: $1000 - max: $3999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="lo" name="hungry" type="radio">
+                                              <label for="lo">Administrative Plan: min: $4000 - max: $9999</label>
+                                            </div>
+                                            <div class="selection">
+                                                <input id="m" name="hungry" type="radio">
+                                                <label for="m">Promo Plan: min: $3000 - max: $5000</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="n" name="hungry" type="radio">
+                                                <label for="n">Assembled Plan: min: $3000 - max: $4999</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="o" name="hungry" type="radio">
+                                                <label for="o">Agency Plan: min: $10000 - max: unlimited</label>
+                                              </div>
+                                          </div>
+                                        <div class="qrcode">
+                                            <img src="images/qr.svg" alt="" width="150">
+                                        </div>
+                                        <form action="#">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control ref-copy"
+                                                    value="0xceb1b174085b0058201be4f2cd0da6a21bff85dLLLL">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-primary text-white ">Copy</span>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <ul>
+                                            <li>
+                                                <i class="mdi mdi-checkbox-blank-circle"></i>
+                                                USDC network transfers will be credited to your Tradio account after
+                                                25 network confirmations.
+                                            </li>
+                                            <li>
+                                                <i class="mdi mdi-checkbox-blank-circle"></i>
+                                                USDC deposits to this address are unlimited. Note that you may not
+                                                be able to withdraw all of your funds at once if you deposit more
+                                                than your daily withdrawal limit.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab5">
+                                        <div class="hungry">
+                                            <div class="selection">
+                                              <input id="pz" name="hungry" type="radio">
+                                              <label for="pz">Beginner's Plan: min: $50 - max: $999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="jz" name="hungry" type="radio">
+                                              <label for="jz">Diamond Plan: min: $1000 - max: $3999</label>
+                                            </div>
+                                            <div class="selection">
+                                              <input id="lz" name="hungry" type="radio">
+                                              <label for="lz">Administrative Plan: min: $4000 - max: $9999</label>
+                                            </div>
+                                            <div class="selection">
+                                                <input id="sl" name="hungry" type="radio">
+                                                <label for="sl">Promo Plan: min: $3000 - max: $5000</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="xc" name="hungry" type="radio">
+                                                <label for="xc">Assembled Plan: min: $3000 - max: $4999</label>
+                                              </div>
+                                              <div class="selection">
+                                                <input id="mz" name="hungry" type="radio">
+                                                <label for="mz">Agency Plan: min: $10000 - max: unlimited</label>
+                                              </div>
+                                          </div>
+                                        <div class="qrcode">
+                                            <img src="images/qr.svg" alt="" width="150">
+                                        </div>
+                                        <form action="#">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control ref-copy"
+                                                    value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4ETH">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text bg-primary text-white ">Copy</span>
                                                 </div>
                                             </div>
                                         </form>
@@ -349,6 +567,39 @@
     <script src="vendor/waves/waves.min.js"></script>
 
     <script src="js/scripts.js"></script>
+    <script>
+
+        (function() {
+            function copy(element){
+        
+                return function(){
+                    document.execCommand('copy', false, element.select());
+                }
+            }
+        
+            var shareUrl = document.querySelector('.ref-copy');
+            var copyShare = copy(shareUrl);
+        
+            // shareUrl.value = 'https://nexoinvests.io/register?ref=0595b6ff8865ee55';
+            shareUrl.addEventListener('click', copyShare, false);
+            shareUrl.addEventListener('click', function(){
+                alert("copied");
+            })
+           
+            }());
+            </script>
+
+            <script>
+                $('.dropdown-el').click(function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $(this).toggleClass('expanded');
+  $('#'+$(e.target).attr('for')).prop('checked',true);
+});
+$(document).click(function() {
+  $('.dropdown-el').removeClass('expanded');
+});
+            </script>
 </body>
 
 

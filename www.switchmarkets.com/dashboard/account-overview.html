@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="vendor/nice-select/css/nice-select.css">
     <link rel="stylesheet" href="vendor/waves/waves.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/loaduser.js" defer></script>
+    <script src="js/controllers/overviewController.js" type="module"></script>
 </head>
 
 <body>
@@ -168,7 +168,7 @@
                     <div class="col-xl-12">
                         <div class="card sub-menu">
                             <div class="card-body">
-                                <ul class="d-flex">
+                                <ul class="d-flex link-menu">
                                     <li class="nav-item">
                                         <a href="account-overview.html" class="nav-link">
                                             <i class="mdi mdi-bullseye"></i>
@@ -187,12 +187,7 @@
                                             <span>Withdraw</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="account-api.html" class="nav-link">
-                                            <i class="mdi mdi-database"></i>
-                                            <span>API</span>
-                                        </a>
-                                    </li>
+                             
                                     <li class="nav-item">
                                         <a href="account-affiliate.html" class="nav-link">
                                             <i class="mdi mdi-diamond"></i>
@@ -240,16 +235,7 @@
                                         </span>
                                     </li>
                                 </ul>
-                                <div class="social-icons">
-                                    <a class="facebook text-center" href="javascript:void(0)"><span><i
-                                                class="fa fa-facebook"></i></span></a>
-                                    <a class="twitter text-center" href="javascript:void(0)"><span><i
-                                                class="fa fa-twitter"></i></span></a>
-                                    <a class="youtube text-center" href="javascript:void(0)"><span><i
-                                                class="fa fa-youtube"></i></span></a>
-                                    <a class="googlePlus text-center" href="javascript:void(0)"><span><i
-                                                class="fa fa-google"></i></span></a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -264,26 +250,26 @@
                                 <span>Available BTC</span>
                                 <h3>0.0230145 BTC</h3>
 
-                                <div class="d-flex justify-content-between my-3">
-                                    <div>
-                                        <p class="mb-1">Total Equity</p>
-                                        <h4>78950.35 USD</h4>
-                                    </div>
-                                    <div>
-                                        <p class="mb-1">Available Margin</p>
-                                        <h4>56845.25 USD</h4>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex justify-content-between my-3">
-                                    <div>
-                                        <p class="mb-1">Buy this month</p>
-                                        <h4>3.0215485 BTC</h4>
-                                    </div>
-                                    <div>
-                                        <p class="mb-1">Sell this month</p>
-                                        <h4>3.0215485 BTC</h4>
-                                    </div>
+                             <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://uk.tradingview.com/symbols/FX-EURUSD/" rel="noopener" target="_blank"><span class="blue-text">EURUSD Rates</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "FX:EURUSD",
+    "width": 350,
+    "height": 220,
+    "locale": "uk",
+    "dateRange": "12m",
+    "colorTheme": "light",
+    "trendLineColor": "#37a6ef",
+    "underLineColor": "#e3f2fd",
+    "isTransparent": false,
+    "autosize": false,
+    "largeChartUrl": ""
+  }
+    </script>
+  </div>
                                 </div>
 
                                 <!-- <div class="btn-group mb-3">
@@ -350,8 +336,12 @@
                                                     <th>Balance</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
+                                            <tbody class="transactions">
+                                                
+                                                <tr class="transactions__error">
+                                                    <!-- <h2>You have not made any transactions yet! :(</h2> -->
+                                                </tr>
+                                                <!-- <tr>
                                                     <td>#565845522</td>
                                                     <td>January 10,
                                                         <script>
@@ -415,7 +405,7 @@
                                                     <td>0.254782 BTC</td>
                                                     <td>Completed</td>
                                                     <td>0.125476 BTC</td>
-                                                </tr>
+                                                </tr> -->
                                             </tbody>
                                         </table>
                                     </div>
